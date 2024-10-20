@@ -65,7 +65,10 @@ This portfolio website is built using React.js and Vite. It showcases my project
 
 ## Screenshots
 Screenshots
+![Screenshot 2024-10-20 214945](https://github.com/user-attachments/assets/be5006eb-6b25-448c-99e6-709f4d648de1)
+
 Home Page
+![Screenshot 2024-10-20 214932](https://github.com/user-attachments/assets/686793c4-3be3-4838-8cba-9f0dfa174de0)
 
 
 About Section
