@@ -4,7 +4,8 @@ import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import AboutCard from "./AboutCard"; // Ensure this matches the filename
-import laptopImg from "../../Assets/about.png"; // Check this path for correctness
+import laptopImg from "../../assets/about.png"; // Update this path
+// Check this path for correctness
 import Toolstack from "./Toolstack"; // Ensure this component exists
 
 function About() {

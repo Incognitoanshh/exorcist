@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../assets/avatar.svg"; // Ensure this path points to the correct location
+
 // Updated path to reflect the correct location
 import Tilt from "react-parallax-tilt";
 import {

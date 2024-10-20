@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
+import homeLogo from "../../assets/home-main.svg"; // Ensure this path points to the correct location
 // Updated path to reflect the correct location
 import Particle from "../Particle";
 import Home2 from "./Home2";
