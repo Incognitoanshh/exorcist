@@ -64,12 +64,12 @@ This portfolio website is built using React.js and Vite. It showcases my project
 
 
 ## Screenshots
+Screenshots
+Home Page
 
-### Home Page
-![Home Page Screenshot](./src/assets/home-page-screenshot.png)
 
-### Project Showcase
-![Projects Page Screenshot](./src/assets/projects-page-screenshot.png)
+About Section
+
 
 ## Contributing
 
