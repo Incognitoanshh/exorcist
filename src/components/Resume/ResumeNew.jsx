@@ -1,19 +1,43 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Spinner } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../assets/finalresume (2).pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+// Set the worker path for pdf.js
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js`;
 
 function ResumeNew() {
+  const pdf = "/assets/finalresume.pdf"; // Updated path
+  console.log("PDF Path:", pdf); // Log the path
+
   const [width, setWidth] = useState(1200);
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setWidth(window.innerWidth);
+    const updateWidth = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", updateWidth);
+    updateWidth(); // Initial width setting
+
+    return () => window.removeEventListener("resize", updateWidth);
   }, []);
+
+  const onLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+    setLoading(false);
+  };
+
+  const onLoadError = (error) => {
+    console.error("Error while loading PDF: ", error);
+    setLoading(false); // Stop loading on error
+  };
 
   return (
     <div>
@@ -31,10 +55,19 @@ function ResumeNew() {
           </Button>
         </Row>
 
-        <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
+        <Row className="resume" style={{ justifyContent: "center" }}>
+          {loading ? (
+            <Spinner animation="border" style={{ margin: "auto" }} />
+          ) : (
+            <Document
+              file={pdf}
+              onLoadSuccess={onLoadSuccess}
+              onLoadError={onLoadError}
+              className="d-flex justify-content-center"
+            >
+              <Page pageNumber={pageNumber} scale={width > 786 ? 1.7 : 0.6} />
+            </Document>
+          )}
         </Row>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
