@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css"; // Keep this line
+import "bootstrap/dist/css/bootstrap.min.css";
+// Keep this line
 import Preloader from "./components/Pre"; // Adjust this path if needed
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
