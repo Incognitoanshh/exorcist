@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import sentimentalImg from "../../Assets/Projects/shocked.png";
-import pinterestImg from "../../Assets/Projects/pinterest.png";
-import imdbImg from "../../Assets/Projects/imdb.png";
-import todoImg from "../../Assets/Projects/to-do-list.png";
-import ccScraperImg from "../../Assets/Projects/cc.png";
-import instagramImg from "../../Assets/Projects/instagram.png";
+import sentimentalImg from "../../assets/Projects/shocked.png"; // Updated path
+import pinterestImg from "../../assets/Projects/pinterest.png"; // Updated path
+import imdbImg from "../../assets/Projects/imdb.png"; // Updated path
+import todoImg from "../../assets/Projects/to-do-list.png"; // Updated path
+import ccScraperImg from "../../assets/Projects/cc.png"; // Updated path
+import instagramImg from "../../assets/Projects/instagram.png"; // Updated path
 
 function Projects() {
   return (
