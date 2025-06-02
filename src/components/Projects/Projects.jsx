@@ -8,6 +8,7 @@ import imdbImg from "../../assets/Projects/imdb.png"; // Updated path
 import todoImg from "../../assets/Projects/to-do-list.png"; // Updated path
 import ccScraperImg from "../../assets/Projects/cc.png"; // Updated path
 import instagramImg from "../../assets/Projects/instagram.png"; // Updated path
+import didImage from "../../assets/Projects/9520.jpg"; // Updated path
 
 function Projects() {
   return (
@@ -21,6 +22,16 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={didImage}
+              isBlog={false}
+              title="Decentralized identity verification System"
+              description="Decentralized Identity (DID) projects leverage blockchain technology to create self-sovereign identities, allowing individuals to control their digital identities without relying on central authorities. These systems enhance privacy, security, and user autonomy by enabling secure, verifiable credentials that can be shared selectively with third parties."
+              ghLink="https://github.com/Incognitoanshh/Decentralized-Identity-Verification-System"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={sentimentalImg}
