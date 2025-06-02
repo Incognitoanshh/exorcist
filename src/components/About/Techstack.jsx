@@ -9,40 +9,47 @@ import {
   DiJava,
   DiHtml5,
   DiCss3,
+  DiVisualstudio,
 } from "react-icons/di";
-import { SiLinux, SiBootstrap } from "react-icons/si";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiBootstrap,
+  SiDocker,
+  SiKubernetes,
+  SiSolidity,
+  SiEthereum,
+  SiLinux,
+} from "react-icons/si";
 
 function Techstack() {
+  const skills = [
+    { icon: <DiJava />, label: "Java" },
+    { icon: <DiPython />, label: "Python" },
+    { icon: <DiJavascript1 />, label: "JavaScript" },
+    { icon: <SiTypescript />, label: "TypeScript" },
+    { icon: <DiReact />, label: "React.js" },
+    { icon: <SiTailwindcss />, label: "Tailwind CSS" },
+    { icon: <SiBootstrap />, label: "Bootstrap" },
+    { icon: <SiSolidity />, label: "Solidity" },
+    { icon: <SiEthereum />, label: "Ethereum" },
+    { icon: <SiDocker />, label: "Docker" },
+    { icon: <SiKubernetes />, label: "Kubernetes" },
+    { icon: <DiGit />, label: "Git" },
+    { icon: <DiHtml5 />, label: "HTML5" },
+    { icon: <DiCss3 />, label: "CSS3" },
+    { icon: <SiLinux />, label: "Linux" },
+    // { icon: <DiVisualstudio />, label: "VS Code" },
+  ];
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiHtml5 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiCss3 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiLinux />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiBootstrap />
-      </Col>
-      {/* Remove Hacking icon as there are no specific icons for it */}
+      {skills.map((skill, index) => (
+        <Col xs={4} md={2} className="tech-icons" key={index}>
+          {skill.icon}
+          <div className="tech-label">{skill.label}</div>
+        </Col>
+      ))}
     </Row>
   );
 }

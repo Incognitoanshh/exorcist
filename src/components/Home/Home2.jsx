@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../assets/avatar.svg"; // Ensure this path points to the correct location
-// Updated path to reflect the correct location
+import myImg from "../../assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -20,30 +19,46 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with web Development and I have at least learnt
-              something,I think… 🤷‍♂️
+              I’m a full-stack developer passionate about building scalable,
+              secure, and decentralized applications.
               <br />
-              <br />I am fluent in classics like
-              <i>
-                <b className="purple"> Java, Javascript and basic of Rust. </b>
-              </i>
-              <br />
-              <br />
-              My field of Interest's are building new &nbsp;
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
+              <br />I have strong hands-on experience with&nbsp;
               <i>
                 <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
+                  Java, Python, JavaScript, and TypeScript
                 </b>
               </i>
-              &nbsp; like
+              &nbsp;and have also explored&nbsp;
+              <b className="purple"> Solidity, Web3, and IPFS </b>
+              for blockchain development.
+              <br />
+              <br />I enjoy building modern UIs with&nbsp;
               <i>
-                <b className="purple"> React.js </b>
+                <b className="purple">React.js</b>
               </i>
+              , styling with&nbsp;
+              <i>
+                <b className="purple">Tailwind CSS</b>
+              </i>
+              , and deploying containerized apps using&nbsp;
+              <i>
+                <b className="purple">Docker & Kubernetes</b>
+              </i>
+              .
+              <br />
+              <br />
+              I’ve worked on smart contracts, authentication systems, NLP tools,
+              and cloud-native pipelines using&nbsp;
+              <b className="purple">CI/CD, Flask, and IBM Cloud CLI</b>.
+              <br />
+              <br />
+              Currently exploring&nbsp;
+              <i>
+                <b className="purple">
+                  AI-enhanced apps, smart data pipelines, and Ethereum dApps
+                </b>
+              </i>
+              .
             </p>
           </Col>
           <Col md={4} className="myAvtar">
